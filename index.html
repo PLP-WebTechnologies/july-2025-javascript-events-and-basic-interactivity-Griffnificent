@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 6 Assignment - Interactive Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h1>My Interactive Web Page</h1>
+    <button id="themeToggle">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Travel Gallery</h2>
+    <img src="https://images.pexels.com/photos/33118523/pexels-photo-33118523.jpeg" alt="Malaga Cathedral">
+    <img src="https://images.pexels.com/photos/32429493/pexels-photo-32429493.jpeg" alt="Honfleur Marina">
+    <img src="https://images.pexels.com/photos/32489790/pexels-photo-32489790.jpeg" alt="Rome Archway">
+  </section>
+
+  <!-- Interactive Section -->
+  <section id="interactive">
+    <h2>Interactive Counter</h2>
+    <p>Clicks: <span id="counter">0</span></p>
+    <button id="incrementBtn">Click Me!</button>
+  </section>
+
+  <!-- Form Section -->
+  <section id="formSection">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email"><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
