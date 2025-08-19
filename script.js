@@ -1,56 +1,48 @@
-// script.js
-
-// 1. DARK MODE TOGGLE
+// Dark mode toggle
 const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
 themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  themeToggle.textContent = 
-    document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  body.classList.toggle("dark");
+  themeToggle.textContent = body.classList.contains("dark")
+    ? "☀️ Light Mode"
+    : "🌙 Dark Mode";
 });
 
-// 2. COUNTER BUTTON
-let count = 0;
-const counter = document.getElementById("counter");
+// Interactive Counter
+let counter = 0;
+const counterDisplay = document.getElementById("counter");
 const incrementBtn = document.getElementById("incrementBtn");
 
 incrementBtn.addEventListener("click", () => {
-  count++;
-  counter.textContent = count;
+  counter++;
+  counterDisplay.textContent = counter;
 });
 
-// 3. CUSTOM FORM VALIDATION
-const form = document.getElementById("signupForm");
+// Form Validation
+const signupForm = document.getElementById("signupForm");
 const formMessage = document.getElementById("formMessage");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // stop form submission until validation passes
+signupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  if (name === "" || email === "" || password === "") {
-    formMessage.textContent = "❌ All fields are required!";
+  if (!name || !email || !password) {
+    formMessage.textContent = "⚠️ Please fill out all fields!";
     formMessage.style.color = "red";
     return;
   }
 
-  // Simple email format check
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (!email.match(emailPattern)) {
-    formMessage.textContent = "❌ Please enter a valid email.";
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    formMessage.textContent = "⚠️ Enter a valid email address!";
     formMessage.style.color = "red";
     return;
   }
 
-  if (password.length < 6) {
-    formMessage.textContent = "❌ Password must be at least 6 characters.";
-    formMessage.style.color = "red";
-    return;
-  }
-
-  // If validation passes
-  formMessage.textContent = "✅ Registration successful!";
+  formMessage.textContent = `✅ Thanks for signing up, ${name}!`;
   formMessage.style.color = "green";
-  form.reset();
+  signupForm.reset();
 });

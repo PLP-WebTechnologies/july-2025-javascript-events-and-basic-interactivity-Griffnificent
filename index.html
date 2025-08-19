@@ -3,45 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 6 Assignment - Interactive Page</title>
+  <title>Responsive Gallery Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav>
-    <h1>My Interactive Web Page</h1>
+    <h1>My Website</h1>
     <button id="themeToggle">🌙 Dark Mode</button>
   </nav>
 
   <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Travel Gallery</h2>
-    <img src="https://images.pexels.com/photos/33118523/pexels-photo-33118523.jpeg" alt="Malaga Cathedral">
-    <img src="https://images.pexels.com/photos/32429493/pexels-photo-32429493.jpeg" alt="Honfleur Marina">
-    <img src="https://images.pexels.com/photos/32489790/pexels-photo-32489790.jpeg" alt="Rome Archway">
+    <h2>Image Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://picsum.photos/600/400?random=1" alt="Gallery Image 1">
+      <img src="https://picsum.photos/600/400?random=2" alt="Gallery Image 2">
+      <img src="https://picsum.photos/600/400?random=3" alt="Gallery Image 3">
+      <img src="https://picsum.photos/600/400?random=4" alt="Gallery Image 4">
+      <img src="https://picsum.photos/600/400?random=5" alt="Gallery Image 5">
+      <img src="https://picsum.photos/600/400?random=6" alt="Gallery Image 6">
+    </div>
   </section>
 
-  <!-- Interactive Section -->
+  <!-- Interactive Counter -->
   <section id="interactive">
-    <h2>Interactive Counter</h2>
-    <p>Clicks: <span id="counter">0</span></p>
-    <button id="incrementBtn">Click Me!</button>
+    <h2>Click Counter</h2>
+    <p>Counter: <span id="counter">0</span></p>
+    <button id="incrementBtn">Click Me</button>
   </section>
 
-  <!-- Form Section -->
+  <!-- Signup Form -->
   <section id="formSection">
     <h2>Sign Up</h2>
     <form id="signupForm">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br>
+      <input type="text" id="name" required>
 
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email"><br>
+      <input type="email" id="email" required>
 
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password"><br>
+      <input type="password" id="password" required>
 
-      <button type="submit">Register</button>
+      <button type="submit">Submit</button>
     </form>
     <p id="formMessage"></p>
   </section>

@@ -1,48 +1,149 @@
-/* style.css */
-
-/* GENERAL STYLES */
-body {
-  font-family: Arial, sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  box-sizing: border-box;
 }
 
-.container {
-  width: 80%;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #222;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark nav {
+  background: #1f1f1f;
+}
+
+body.dark a {
+  color: #9ecbff;
+}
+
+/* Navbar */
+nav {
+  background: #0077cc;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+}
+
+nav button {
+  background: #ffffff;
+  color: #0077cc;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #f0f0f0;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
 }
 
-h1, h2 {
+/* Gallery */
+#gallery h2 {
+  margin-bottom: 1rem;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-/* IMAGE GALLERY */
-.gallery {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
-.gallery img {
+.gallery-grid img {
   width: 100%;
-  height: auto;
+  height: 200px;          /* uniform landscape height */
+  object-fit: cover;      /* ensures landscape crop */
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: block;
+  transition: transform 0.3s;
 }
 
-/* BUTTONS */
-button {
-  padding: 10px 15px;
-  margin: 10px 0;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background: #007BFF;
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Interactive Counter */
+#interactive {
+  text-align: center;
+}
+
+#interactive button {
+  background: #0077cc;
   color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+#interactive button:hover {
+  background: #005fa3;
+}
+
+/* Form */
+#formSection form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+#formSection label {
+  font-weight: bold;
+}
+
+#formSection input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#formSection button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#formSection button:hover {
+  background: #005fa3;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+}
